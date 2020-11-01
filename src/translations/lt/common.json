@@ -1,0 +1,130 @@
+{
+  "general": {
+    "dataInCloud": "Duomenys saugomi naršyklėje ir sinchronizuojami su kitais įrenginiais",
+    "dataInLocalStorage": "Duomenys saugomi naršyklėje"
+  },
+  "settings": {
+    "name": "Nustatymai",
+    "autoFillIn": "Automatinis pildymas",
+    "autoSignIn": "Automatinis prisijungimas",
+    "language": "Kalba",
+    "storageType": "Duomenų saugojimas",
+    "fancyLayout": "Rodyti kaip korteles",
+    "warnAboutPassword": "Perspėti apie duomenų šifravimą prieš saugant"
+  },
+  "savedCredentials": {
+    "name": "Prisijungimai",
+    "addNew": "Pridėti",
+    "importFromBrowser": "Ištraukti iš naršyklės",
+    "bank": "Bankas",
+    "login": "Prisijungimas",
+    "encrypted": "Užšifruoti",
+    "main": "Pagrindinis",
+    "yes": "Taip",
+    "no": "Ne",
+    "edit": "Redaguoti",
+    "delete": "Ištrinti",
+    "fillInPassword": "Užpildyti laukelius",
+    "save": "Išsaugoti",
+    "cancel": "Atšaukti",
+    "deleteAll": "Ištrinti visus duomenis",
+    "warnAndConfirmAboutPassword": "Ar tikrai norite išsaugoti neužšifruotus duomenis?",
+    "storage": {
+      "local": "Dabartinė naršyklė",
+      "sync": "Sinchronizuoti tarp įrenginių"
+    },
+    "seb": {
+      "name": "SEB Bankas",
+      "smartid": "Smart-ID",
+      "msignature": "M. Parašas",
+      "generator": "Generatorius",
+      "idcode": "Atpažinimo kodas",
+      "identity": "Asmens kodas",
+      "phone": "Telefonas"
+    },
+    "swed": {
+      "name": "SwedBank",
+      "smartid": "Smart-ID",
+      "msignature": "M. Parašas",
+      "generator": "PIN Generatorius",
+      "idcard": "ID kortelė",
+      "idcode": "Naudotojos ID",
+      "identity": "Asmens kodas",
+      "phone": "Telefono numeris"
+    },
+    "luminordnb": {
+      "name": "Luminor | DNB",
+      "smartid": "Smart-ID",
+      "msignature": "M. parašas",
+      "generator": "Generatorius",
+      "esignature": "E. parašas",
+      "idcard": "ID card",
+      "idcode": "Prisijungimo kodas",
+      "identity": "Asmens kodas",
+      "phone": "Telefono numeris"
+    }
+  },
+  "about": {
+    "name": "Apie",
+    "version": "Versija"
+  },
+  "modal" : {
+    "name": "Įspėjimas",
+    "close": "Uždaryti",
+    "next": "Toliau",
+    "back": "Atgal",
+    "content": {
+      "step1": {
+        "generalWarningLabel": "Bendras patarimas",
+        "generalTitle": "Nerekomenduojama privačių duomenų išsaugoti kompiuteryje ar užsirašinėti ant lapelių.",
+        "instruction": "Prieš išsaugodami prisijungimo duomenis, pasverkite naudą ir riziką:",
+        "instruction1": "Ar prie jūsų kompiuterio gali laisvai prieti nepageidaujami asmenys?",
+        "instruction2": "Ar jusų kompiuteris gali turėti virusų ir žalingų programų?",
+        "instruction3": "Ar naudojama atnaujinta operacinė sistema ir gamintojo palaikoma naršyklės versija?"
+      },
+      "step2": {
+        "generalTitle": "Smart-ID naudojimas",
+        "instruction1": "Neveskite „Smart-ID“ PIN kodų ir netvirtinkite operacijų ar prisijungimų prie  banko, jei patys nesijungiate ar neatliekate jokių operacijų.",
+        "_instruction2": "Netvirtinkite operacijų ar prisijungimų prie interneto banko ar programėls, kurių patys neinicijavote.",
+        "instruction3": "Naudodamiesi „Smart-ID“ ir mobiliuoju parašu visada įsitikinkite, kad kontrolinis kodas, rodomas programėlėje ir interneto banke, sutampa.",
+        "instruction4": "Daugiau saugumo patarimų rasite čia",
+        "instruction5": ""
+      },
+      "step3" : {
+        "generalTitle": "Bendra informacija",
+        "instruction1": "Šis naršyklės plėtinys veikia tik su officialiais banku puslapiais.",
+        "instruction2": "Užėjus ar atidarius falsifikuotą kenkėjiško banko puslapį pvz: https://xxx-bankas.lt, šis plėtinys automatiškai nepildys prisijungimo laukų ir nebandys jungtis.",
+        "instruction3": "Duomenys gali būti saugomi pasirinktinai arba vieno kompiuterio naršyklės atmintyje, arba sinchronizuojami tarp to paties vartotjo skirtingų įrenginių naršyklių.",
+        "instruction4": "Jokia informacija nėra siunčiama ir saugoma kitur nei jūsų kompiuteris, nebent pasirenkate sinchronizavimą. Tokiu atveju dauomenys daugomi kartu su kitais naršyklės duomenimis.",
+        "instruction5": ""
+      },
+      "step4": {
+        "generalTitle": "Nustatymai",
+        "autoFillIn": "Užpildo prisijungimo laukelius automatiškai.",
+        "autoSignIn": "Jei laukeliai yra užpildyti, automatiškai bus jungiamasi.",
+        "storageType": "Užpildo prisijungimo laukelius automatiškai.",
+        "fancyLayout": "Įrašai rodomi arba kaip tinklelis, arba išdėstomi kaip kortelės.",
+        "warnAboutPassword": "Saugant prisijungimo duomenis iššoka priminimas, jei duomenys nėra užšifruoti."
+      },
+      "step5": {
+        "generalTitle": "Pradžia",
+        "add": "Prideda naują prisijungimo eilutę.",
+        "importFromBrowser": "Iš naršyklėje įrašytų laukelių suranda prisijungimo duomenis ir įkelia į plėtinio langą.",
+        "deleteAll": "Ištrina visus išsaugotus prisijungimus.",
+        "edit": "Leidžia redaguoti prisijungimo duomenis.",
+        "delete": "Ištrina pasirinktus prisijungimuo duomenis.",
+        "fillInCredentials": "Internetiniame banke užpildo prisijungimo laukelius su pasirinktais duomenimis.",
+        "save": "Išsaugo atliktus pakeitimus.",
+        "cancel": "Atšaukti atliktus pakeitimus."
+      },
+      "step6": {
+        "generalTitle": "Palikomi bankai",
+        "seb": "SEB bank",
+        "swed": "Swedbank",
+        "luminordnb": "Luminor DNB"
+      }
+    }
+  },
+  "controls": {
+  }
+}

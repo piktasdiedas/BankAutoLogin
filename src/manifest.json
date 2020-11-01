@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bank credentials",
+  "description": "Remembers default login and fires when open ebank page.",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Credentials"
+  },
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "permissions": [
+    "https://e.seb.lt/*", "https://www.swedbank.lt/*", "activeTab", "declarativeContent", "storage"
+  ],
+  "background": {
+    "scripts": ["bg/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+  {
+    "matches": ["https://e.seb.lt/*", "https://www.swedbank.lt/*"],
+    "js": ["content_scripts/content.js"]
+  }]
+}

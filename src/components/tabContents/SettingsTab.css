@@ -1,0 +1,15 @@
+.settings_content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  min-height: 400px;
+}
+
+.settings_content_part {
+  width: 50%;
+}
+
+.settings_content_controls {
+  align-self: flex-end;
+  margin-top: auto;
+}

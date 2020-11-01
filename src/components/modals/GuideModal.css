@@ -1,0 +1,38 @@
+.b_modal {
+  background: rgba(255, 255, 255, 0.9)
+}
+
+.b_modal_content_container {
+  height: 100vh;
+}
+
+.b_modal_content_container:focus {
+  outline: none;
+}
+
+.b_modal_content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 50px 15px 15px 15px;
+}
+
+.b_modal_content li {
+  margin: 5px 0;
+  align-items: center;
+  display: flex;
+}
+
+.b_modal_controls {
+  display: flex;
+  margin-top: auto;
+}
+
+.b_modal_controls > button {
+  margin: 5px;
+}
+
+.b_modal_controls > button:last-child {
+  margin-left: auto;
+}

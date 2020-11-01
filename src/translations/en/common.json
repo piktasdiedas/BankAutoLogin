@@ -1,0 +1,130 @@
+{
+  "general": {
+    "dataInCloud": "Data saved in Browsers storage and synced with other devices",
+    "dataInLocalStorage": "Data saved in Browsers storage"
+  },
+  "settings": {
+    "name": "Settings",
+    "autoFillIn": "Auto fill in",
+    "autoSignIn": "Auto sign in",
+    "language": "Language",
+    "storageType": "Storage type",
+    "fancyLayout": "Show as cards",
+    "warnAboutPassword": "Warn to encrypt credentials before saving"
+  },
+  "savedCredentials": {
+    "name": "Credentials",
+    "addNew": "Add new",
+    "importFromBrowser": "Import from browser",
+    "bank": "Bank",
+    "login": "Log in",
+    "encrypted": "Encrypted",
+    "main": "Main",
+    "yes": "Yes",
+    "no": "No",
+    "edit": "Edit",
+    "delete": "Delete",
+    "fillInPassword": "Fill in credentials",
+    "save": "Save",
+    "cancel": "Cancel",
+    "deleteAll": "Delete all credentials",
+    "warnAndConfirmAboutPassword": "Are you sure want to save without encrypting credentials?",
+    "storage": {
+      "local": "Current Browser",
+      "sync": "Sync between devices"
+    },
+    "seb": {
+      "name": "SEB Bank",
+      "smartid": "Smart-ID",
+      "msignature": "M. Signature",
+      "generator": "Digipass",
+      "idcode": "User ID",
+      "identity": "Personal code",
+      "phone": "Phone"
+    },
+    "swed": {
+      "name": "SwedBank",
+      "smartid": "Smart-ID",
+      "msignature": "Mobile ID",
+      "generator": "PIN Generator",
+      "idcard": "ID card",
+      "idcode": "User ID",
+      "identity": "Personal code",
+      "phone": "Phone Number"
+    },
+    "luminordnb": {
+      "name": "Luminor | DNB",
+      "smartid": "Smart-ID",
+      "msignature": "M-signature",
+      "generator": "Generator",
+      "esignature": "E-signature",
+      "idcard": "ID card",
+      "idcode": "Login code",
+      "identity": "Personal/company code",
+      "phone": "Phone Number"
+    }
+  },
+  "about": {
+    "name": "About",
+    "version": "Version"
+  },
+  "modal" : {
+    "name": "Notice",
+    "close": "Close",
+    "next": "Next",
+    "back": "Back",
+    "content": {
+      "step1": {
+        "generalWarningLabel": "General advice",
+        "generalTitle": "It is advised not to keep private date on computer or sticky notes.",
+        "instruction": "Before saving credentials, consider pros and cons:",
+        "instruction1": "Does unwanted people has free access to your computer?",
+        "instruction2": "Does your computer has viruses or malware?",
+        "instruction3": "Do you use updated operational system and supported browser version?"
+      },
+      "step2": {
+        "generalTitle": "Using Smart-ID",
+        "instruction1": "Do not enter „Smart-ID“ PIN codes and do not approve operations or logins to bank, if you are not logging in or performing any actions.",
+        "_instruction2": "Netvirtinkite operacijų ar prisijungimų prie interneto banko ar programėls, kurių patys neinicijavote.",
+        "instruction3": "When „Smart-ID“ and mobile signature make sure, that control code, displayed in app and on internet bank, are matching.",
+        "instruction4": "More sucurity advices can be found here",
+        "instruction5": ""
+      },
+      "step3" : {
+        "generalTitle": "General information",
+        "instruction1": "This extenssion works only on official banks pages.",
+        "instruction2": "If visiting or opening fake bank webpages, e.g. https://xxx-bankas.lt, this extension will not automatically fill in fields and won't try to login to bank.",
+        "instruction3": "Credentials can be saved either in current computer browser storage, or syncronized between same user different devices browsers.",
+        "instruction4": "No credentials are send or saved outside of computer, unless data needs to be syncronized. In this case, credentials are saved together with another browser data in Google servers.",
+        "instruction5": ""
+      },
+      "step4": {
+        "generalTitle": "Settings",
+        "autoFillIn": "Credentials fields are automatically filled in.",
+        "autoSignIn": "If credentials are filled in, login to bank is initiated.",
+        "storageType": "Credentials sre stored in current browser, or sycronyzed with another devices.",
+        "fancyLayout": "Logins are shown either as grid, or as cards.",
+        "warnAboutPassword": "If credentials are not encrypted, warning will popup before saving."
+      },
+      "step5": {
+        "generalTitle": "Basics",
+        "add": "Adds new login row.",
+        "importFromBrowser": "Extract credentials from internet bank input fields and copies them to extension window.",
+        "deleteAll": "Deletes all saved credentials.",
+        "edit": "Allows editing credentials.",
+        "delete": "Deletes selected credentials.",
+        "fillInCredentials": "Fills in internet bank input fields with selected credentials.",
+        "save": "Saves modified changes.",
+        "cancel": "Cancel modified credentials."
+      },
+      "step6": {
+        "generalTitle": "Supported banks",
+        "seb": "SEB bank",
+        "swed": "Swedbank",
+        "luminordnb": "Luminor DNB"
+      }
+    }
+  },
+  "controls": {
+  }
+}
