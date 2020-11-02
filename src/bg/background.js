@@ -16,7 +16,7 @@ if (chrome.runtime.onInstalled) {
 
     if (chrome.runtime.OnInstalledReason.INSTALL) {
       chrome.storage.sync.set({ settings: initialSettings }, result => {})
-      chrome.storage.sync.set({ logins: { data: [...test] } }, result => {})
+      chrome.storage[initialSettings.storageType].set({ logins: { data: [...test] } }, result => {})
     }
   })
 }
