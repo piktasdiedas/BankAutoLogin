@@ -4,7 +4,7 @@ export const dummyCreateStorage = () => {
 
   if (!window.dummyData) {
     window.dummyData = {}
-    window.dummyData.settings = { language: 'en', storageType: 'local', finishedGuideStep: 10, fancyLayout: true }
+    window.dummyData.settings = { language: 'en', storageType: 'local', finishedGuideStep: 10, fancyLayout: true, warnAboutPassword: false }
     window.dummyData.logins = {}
     window.dummyData.logins.data = [{ id: 1, bank: 'seb', loginOption: 'msignature', isEncrypted: false, credentials: [] }]
     window.dummyData.logins.data.push({ id: 2, bank: 'seb', loginOption: '', isEncrypted: false, credentials: [{ id: 'identity', value: 675864534 }] })

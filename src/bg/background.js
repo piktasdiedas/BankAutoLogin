@@ -5,10 +5,11 @@ import MessageType from '../constants/MessageAction'
 if (chrome.runtime.onInstalled) {
   chrome.runtime.onInstalled.addListener(details => {
     const initialSettings = {
-      autoFillIn: false,
-      autoLogIn: false,
+      autoFillIn: true,
+      autoLogIn: true,
       language: '',
       fancyLayout: false,
+      warnAboutPassword: true,
       storageType: StorageType.LOCAL,
       finishedGuideStep: 0
     }

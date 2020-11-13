@@ -98,5 +98,9 @@ export const Constants = {
     { id: 'idcode', name: 'Naudotojo ID' },
     { id: 'identity', name: 'Asmens kodas' },
     { id: 'phone', name: 'Telefonas' }
+  ],
+  AvailableLanguages: [
+    { key: 'en', name: 'English' },
+    { key: 'lt', name: 'Lietuvių' }
   ]
 }

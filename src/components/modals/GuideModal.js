@@ -13,6 +13,7 @@ import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
 import { withTranslation } from 'react-i18next'
 import { SettingsContext } from 'contexts/SettingsContext'
+import { Constants } from 'constants/Constants'
 
 import './GuideModal.css'
 
@@ -130,8 +131,10 @@ const GuideModal = ({ t, isOpen, handleOnClose }) => {
                   settingsChanged({ language: e.target.value })
                 }}
               >
-                <MenuItem value={'en'}>English</MenuItem>
-                <MenuItem value={'lt'}>Lietuvių</MenuItem>
+                {
+                  Constants.AvailableLanguages
+                    .map(lang => <MenuItem key={lang.key} value={lang.key}>{lang.name}</MenuItem>)
+                }
               </Select>
             }
             label={t('settings.language')}

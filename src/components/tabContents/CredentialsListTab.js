@@ -77,7 +77,7 @@ const CredentialsList = ({ t, setLoading }) => {
 
   const handleSave = () => {
     let allowToSave = !(settings.warnAboutPassword && !editable.isEncrypted)
-    if (allowToSave) {
+    if (!allowToSave) {
       allowToSave = window.confirm(t('savedCredentials.warnAndConfirmAboutPassword'))
     }
 
@@ -151,7 +151,7 @@ const CredentialsList = ({ t, setLoading }) => {
           bank: bank.id,
           loginOption: response.loginOption,
           credentials: [],
-          isMain: false,
+          isMain: true,
           isEncrypted: false
         }
 
@@ -186,7 +186,8 @@ const CredentialsList = ({ t, setLoading }) => {
       id: editable.id,
       bank: e.target.value,
       loginOption: '',
-      credentials: []
+      credentials: [],
+      isEncrypted: false
     })
   }
 
@@ -203,7 +204,8 @@ const CredentialsList = ({ t, setLoading }) => {
       id: editable.id,
       bank: editable.bank,
       loginOption: e.target.value,
-      credentials: creadentials.map(c => ({ id: c.id, value: '' }))
+      credentials: creadentials.map(c => ({ id: c.id, value: '' })),
+      isEncrypted: false
     })
   }
 

@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import withLoaderBar from 'components/withLoaderBar'
 import StorageType from 'constants/StorageType'
 import MessageType from 'constants/MessageAction'
+import { Constants } from 'constants/Constants'
 import { SettingsContext } from 'contexts/SettingsContext'
 import { parseToBool } from 'utils/GeneralUtils'
 
@@ -140,8 +141,10 @@ const SettingsTab = ({ t, setLoading }) => {
                   updateSettings('language', e.target.value)
                 }}
               >
-                <MenuItem value={'en'}>English</MenuItem>
-                <MenuItem value={'lt'}>Lithuanian</MenuItem>
+                {
+                  Constants.AvailableLanguages
+                    .map(lang => <MenuItem key={lang.key} value={lang.key}>{lang.name}</MenuItem>)
+                }
               </Select>
             }
           />
