@@ -1,5 +1,6 @@
 import { Constants } from '../constants/Constants'
-import { getFromStorage } from '../utils/StorageUtils'
+import StorageType from '../constants/StorageType'
+import { getFromStorage, putToStorage } from '../utils/StorageUtils'
 import MessageType from '../constants/MessageAction'
 import { decrypt } from '../utils/CryptoUtils'
 import { getIdFromUrl, deep } from '../utils/GeneralUtils'
@@ -15,6 +16,8 @@ const instructionsTemplate = [
 ]
 
 const instructionProcesor = (instructions, autoLogIn) => {
+  let filledAtleastOnce = false
+
   let domElement = null
   for (const ins of instructions) {
     switch (ins.action) {
@@ -24,6 +27,7 @@ const instructionProcesor = (instructions, autoLogIn) => {
       case 'set':
         if (domElement) {
           domElement[ins.key] = ins.value
+          filledAtleastOnce = true
         }
         break
       case 'trigger':
@@ -43,6 +47,15 @@ const instructionProcesor = (instructions, autoLogIn) => {
       default:
         Error(`Unknown instruction with action '${ins.action}'`)
     }
+  }
+
+  if (filledAtleastOnce) {
+    getFromStorage({ key: 'userData' })
+      .then(userData => {
+        console.log(userData)
+        userData.timesAutoFill = userData.timesAutoFill + 1
+        putToStorage({ key: 'userData', val: userData, storageType: StorageType.SYNC })
+      })
   }
 }
 

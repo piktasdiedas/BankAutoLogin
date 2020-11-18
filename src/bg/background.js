@@ -13,11 +13,24 @@ if (chrome.runtime.onInstalled) {
       storageType: StorageType.LOCAL,
       finishedGuideStep: 0
     }
+    const initialUserData = {
+      timesAutoFill: 0
+    }
     const test = []
 
     if (chrome.runtime.OnInstalledReason.INSTALL) {
       chrome.storage.sync.set({ settings: initialSettings }, result => {})
+      chrome.storage.sync.set({ userData: initialUserData }, result => {})
       chrome.storage[initialSettings.storageType].set({ logins: { data: [...test] } }, result => {})
+    } else if (chrome.runtime.OnInstalledReason.UPDATE) {
+      getFromStorage({ key: 'userData', storageType: StorageType.SYNC })
+        .then(result => {
+          if (!result.userData) {
+            result.timesAutoFill = 0
+            putToStorage({ key: 'userData', val: result, storageType: StorageType.SYNC })
+              .then('Saved new user data')
+          }
+        })
     }
   })
 }

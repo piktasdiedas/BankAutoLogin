@@ -6,7 +6,17 @@
 }
 
 .settings_content_part {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.settings_content_part_col {
+  width: 48%;
+}
+
+.settings_content_part_col > * {
+  height: 42px;
 }
 
 .settings_content_controls {

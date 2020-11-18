@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     justifyContent: 'flex-end'
   },
   label: {
-    width: '170px',
+    width: '80%',
     textAlign: 'start',
     wordWrap: 'break-word',
     display: 'inline-table'
@@ -81,90 +81,94 @@ const SettingsTab = ({ t, setLoading }) => {
     <>
       <div className='settings_content'>
         <div className='settings_content_part'>
-          <FormControlLabel
-            label={t('settings.autoFillIn')}
-            labelPlacement='start'
-            classes={classes}
-            control={
-              <Checkbox
-                checked={parseToBool(settingsState.autoFillIn, false)}
-                color='primary'
-                onClick={e => updateSettings('autoFillIn', !settingsState.autoFillIn)}
-              />
-            }
-          />
-          <FormControlLabel
-            label={t('settings.autoSignIn')}
-            labelPlacement='start'
-            classes={classes}
-            control={
-              <Checkbox
-                checked={parseToBool(settingsState.autoLogIn, false)}
-                color='primary'
-                onClick={e => updateSettings('autoLogIn', !settingsState.autoLogIn)}
-              />
-            }
-          />
-          <FormControlLabel
-            label={t('settings.warnAboutPassword')}
-            labelPlacement='start'
-            classes={classes}
-            control={
-              <Checkbox
-                checked={parseToBool(settingsState.warnAboutPassword, false)}
-                color='primary'
-                onClick={e => updateSettings('warnAboutPassword', !settingsState.warnAboutPassword)}
-              />
-            }
-          />
-          <FormControlLabel
-            label={t('settings.fancyLayout')}
-            labelPlacement='start'
-            classes={classes}
-            control={
-              <Checkbox
-                checked={parseToBool(settingsState.fancyLayout, false)}
-                color='primary'
-                onClick={e => updateSettings('fancyLayout', !settingsState.fancyLayout)}
-              />
-            }
-          />
-          <FormControlLabel
-            label={t('settings.language')}
-            labelPlacement='start'
-            classes={classes}
-            control={
-              <Select
-                fullWidth
-                value={settingsState.language || ''}
-                onChange={e => {
-                  updateSettings('language', e.target.value)
-                }}
-              >
-                {
-                  Constants.AvailableLanguages
-                    .map(lang => <MenuItem key={lang.key} value={lang.key}>{lang.name}</MenuItem>)
-                }
-              </Select>
-            }
-          />
-          <FormControlLabel
-            label={t('settings.storageType')}
-            labelPlacement='start'
-            classes={classes}
-            control={
-              <Select
-                fullWidth
-                value={settingsState.storageType || ''}
-                onChange={e => {
-                  updateSettings('storageType', e.target.value)
-                }}
-              >
-                <MenuItem value={StorageType.LOCAL}>{t(`savedCredentials.storage.${StorageType.LOCAL}`)}</MenuItem>
-                <MenuItem value={StorageType.SYNC}>{t(`savedCredentials.storage.${StorageType.SYNC}`)}</MenuItem>
-              </Select>
-            }
-          />
+          <div className='settings_content_part_col'>
+            <FormControlLabel
+              label={t('settings.autoFillIn')}
+              labelPlacement='start'
+              classes={classes}
+              control={
+                <Checkbox
+                  checked={parseToBool(settingsState.autoFillIn, false)}
+                  color='primary'
+                  onClick={e => updateSettings('autoFillIn', !settingsState.autoFillIn)}
+                />
+              }
+            />
+            <FormControlLabel
+              label={t('settings.autoSignIn')}
+              labelPlacement='start'
+              classes={classes}
+              control={
+                <Checkbox
+                  checked={parseToBool(settingsState.autoLogIn, false)}
+                  color='primary'
+                  onClick={e => updateSettings('autoLogIn', !settingsState.autoLogIn)}
+                />
+              }
+            />
+            <FormControlLabel
+              label={t('settings.warnAboutPassword')}
+              labelPlacement='start'
+              classes={classes}
+              control={
+                <Checkbox
+                  checked={parseToBool(settingsState.warnAboutPassword, false)}
+                  color='primary'
+                  onClick={e => updateSettings('warnAboutPassword', !settingsState.warnAboutPassword)}
+                />
+              }
+            />
+          </div>
+          <div className='settings_content_part_col'>
+            <FormControlLabel
+              label={t('settings.fancyLayout')}
+              labelPlacement='start'
+              classes={classes}
+              control={
+                <Checkbox
+                  checked={parseToBool(settingsState.fancyLayout, false)}
+                  color='primary'
+                  onClick={e => updateSettings('fancyLayout', !settingsState.fancyLayout)}
+                />
+              }
+            />
+            <FormControlLabel
+              label={t('settings.language')}
+              labelPlacement='start'
+              classes={classes}
+              control={
+                <Select
+                  fullWidth
+                  value={settingsState.language || ''}
+                  onChange={e => {
+                    updateSettings('language', e.target.value)
+                  }}
+                >
+                  {
+                    Constants.AvailableLanguages
+                      .map(lang => <MenuItem key={lang.key} value={lang.key}>{lang.name}</MenuItem>)
+                  }
+                </Select>
+              }
+            />
+            <FormControlLabel
+              label={t('settings.storageType')}
+              labelPlacement='start'
+              classes={classes}
+              control={
+                <Select
+                  fullWidth
+                  value={settingsState.storageType || ''}
+                  onChange={e => {
+                    updateSettings('storageType', e.target.value)
+                  }}
+                >
+                  <MenuItem value={StorageType.LOCAL}>{t(`savedCredentials.storage.${StorageType.LOCAL}`)}</MenuItem>
+                  <MenuItem value={StorageType.SYNC}>{t(`savedCredentials.storage.${StorageType.SYNC}`)}</MenuItem>
+                </Select>
+              }
+            />
+          </div>
         </div>
         <div className='settings_content_controls'>
           <Button

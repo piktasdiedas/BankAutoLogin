@@ -1,3 +1,13 @@
 .aboutTab_container > div {
   margin: 10px 0;
 }
+
+.about_separator {
+  width: 35%;
+  margin: 25px auto;
+}
+
+.about_timeAutoFillContainer {
+  font-size: 1.3em;
+  font-weight: bold;
+}
