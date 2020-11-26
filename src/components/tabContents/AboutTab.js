@@ -5,6 +5,7 @@ import { withTranslation } from 'react-i18next'
 import StarRateIcon from '@material-ui/icons/StarRate'
 import StorageType from 'constants/StorageType'
 import { getFromStorage } from 'utils/StorageUtils'
+import CustomLink from 'components/CustomLink'
 
 import './AboutTab.css'
 
@@ -13,7 +14,9 @@ const AboutTab = ({ t }) => {
   const version = chrome.runtime.getManifest
     ? chrome.runtime.getManifest().version : 'unknown'
 
+  const devUrl = 'https://mantas.app'
   const rateUrl = `https://chrome.google.com/webstore/detail/${chrome.runtime.id}`
+  const sourceCodeUrl = 'https://github.com/piktasdiedas/BankAutoLogin'
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -32,21 +35,25 @@ const AboutTab = ({ t }) => {
       </div>
       <hr className='about_separator' />
       <div>
-        by <a href='https://mantas.app' rel='noopener noreferrer' target='_blank'>Mantas Cekanauskas</a>
+        by <CustomLink href={devUrl}>Mantas Cekanauskas</CustomLink>
       </div>
       <div>{t('about.version')} - {version}</div>
       <hr className='about_separator' />
+      <div>
+        Source code in <CustomLink href={sourceCodeUrl}>GitHub</CustomLink>
+      </div>
+      <hr className='about_separator' />
       <div className='rate_container'>
-        <a href={rateUrl} rel='noopener noreferrer' target='_blank'>Rate</a>
+        <CustomLink href={rateUrl}>Rate</CustomLink>
       </div>
       <div className='rate_container'>
-        <a href={rateUrl} rel='noopener noreferrer' target='_blank'>
+        <CustomLink href={rateUrl}>
           <StarRateIcon />
           <StarRateIcon />
           <StarRateIcon />
           <StarRateIcon />
           <StarRateIcon />
-        </a>
+        </CustomLink>
       </div>
     </div>
   )

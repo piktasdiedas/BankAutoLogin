@@ -30,7 +30,7 @@ const emptyLogin = {
   bank: '',
   loginOption: '',
   credentials: [],
-  isMain: false,
+  isMain: true,
   isEncrypted: false
 }
 

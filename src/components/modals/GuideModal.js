@@ -14,6 +14,7 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
 import { withTranslation } from 'react-i18next'
 import { SettingsContext } from 'contexts/SettingsContext'
 import { Constants } from 'constants/Constants'
+import CustomLink from 'components/CustomLink'
 
 import './GuideModal.css'
 
@@ -100,9 +101,9 @@ const GuideModal = ({ t, isOpen, handleOnClose }) => {
       <>
         <h3>{t('modal.content.step6.generalTitle')}</h3>
         <ul>
-          <li><a href='https://www.seb.lt/' target='_blank' rel='noopener noreferrer'>{t('modal.content.step6.seb')}</a></li>
-          <li><a href='https://www.swedbank.lt/' target='_blank' rel='noopener noreferrer'>{t('modal.content.step6.swed')}</a></li>
-          <li><a href='https://www.luminor.lt/' target='_blank' rel='noopener noreferrer'>{t('modal.content.step6.luminordnb')}</a></li>
+          <li><CustomLink href='https://www.seb.lt/'>{t('modal.content.step6.seb')}</CustomLink></li>
+          <li><CustomLink href='https://www.swedbank.lt/'>{t('modal.content.step6.swed')}</CustomLink></li>
+          <li><CustomLink href='https://www.luminor.lt/'>{t('modal.content.step6.luminordnb')}</CustomLink></li>
         </ul>
       </>
     )
