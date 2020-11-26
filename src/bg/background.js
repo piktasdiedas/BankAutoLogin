@@ -74,6 +74,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     } else if (request.action === MessageType.MOVE_LOGINS) {
       const loginsFrom = await getFromStorage({ key: 'logins', storageType: request.data.from })
       const loginsTo = await getFromStorage({ key: 'logins', storageType: request.data.to })
+      if (!loginsTo.data) {
+        loginsTo.data = []
+      }
+
       let maxId = Math.max(0, ...loginsTo.data.map(l => Number(l.id)).filter(Boolean)) + 1
 
       for (const l of loginsFrom.data) {
