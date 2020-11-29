@@ -45,6 +45,7 @@
     "swed": {
       "name": "SwedBank",
       "smartid": "Smart-ID",
+      "biometrics": "Biometrics",
       "msignature": "Mobile ID",
       "generator": "PIN Generator",
       "idcard": "ID card",

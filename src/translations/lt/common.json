@@ -45,6 +45,7 @@
     "swed": {
       "name": "SwedBank",
       "smartid": "Smart-ID",
+      "biometrics": "Biometrika",
       "msignature": "M. Parašas",
       "generator": "PIN Generatorius",
       "idcard": "ID kortelė",

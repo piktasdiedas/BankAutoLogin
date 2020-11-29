@@ -204,7 +204,7 @@ const CredentialsList = ({ t, setLoading }) => {
       id: editable.id,
       bank: editable.bank,
       loginOption: e.target.value,
-      credentials: creadentials.map(c => ({ id: c.id, value: '' })),
+      credentials: creadentials.map(c => ({ id: c.id, value: editable.credentials.find(old => old.id === c.id)?.value ?? '' })),
       isEncrypted: false
     })
   }
