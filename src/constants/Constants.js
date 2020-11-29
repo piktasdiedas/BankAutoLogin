@@ -31,15 +31,16 @@ export const Constants = {
       logo: 'https://www.swedbank.com/content/dam/swedbank/corporate/om-oss/bankens-historia/koncernens-symboler-genom-tiderna/img_100046.jpg',
       loginOptions: [
         { id: 'smartid', loginCredentials: ['idcode', 'identity'], path: '#loginTab_SMART_ID, .login-widget__tabs .ui-tabs__caption:nth-child(1) button', pathImport: '#loginTab_SMART_ID, .login-widget__tabs .ui-tabs__caption:nth-child(1)' },
-        { id: 'msignature', loginCredentials: ['idcode', 'identity'], path: '#loginTab_CERTIFICATE, .login-widget__tabs .ui-tabs__caption:nth-child(2) button', pathImport: '#loginTab_CERTIFICATE, .login-widget__tabs .ui-tabs__caption:nth-child(2)' },
-        { id: 'generator', loginCredentials: ['idcode', 'identity'], path: '#loginTab_MOBILE_ID, .login-widget__tabs .ui-tabs__caption:nth-child(3) button', pathImport: '#loginTab_MOBILE_ID, .login-widget__tabs .ui-tabs__caption:nth-child(3)' },
-        { id: 'idcard', loginCredentials: ['idcode', 'identity', 'phone'], path: '#loginTab_PIN_CALCULATOR, .login-widget__tabs .ui-tabs__caption:nth-child(4) button', pathImport: '#loginTab_PIN_CALCULATOR, .login-widget__tabs .ui-tabs__caption:nth-child(4)' }
+        { id: 'biometrics', loginCredentials: ['idcode', 'identity'], path: '#loginTab_CERTIFICATE, .login-widget__tabs .ui-tabs__caption:nth-child(2) button', pathImport: '#loginTab_CERTIFICATE, .login-widget__tabs .ui-tabs__caption:nth-child(2)' },
+        { id: 'msignature', loginCredentials: ['idcode', 'phone'], path: '#loginTab_CERTIFICATE, .login-widget__tabs .ui-tabs__caption:nth-child(3) button', pathImport: '#loginTab_CERTIFICATE, .login-widget__tabs .ui-tabs__caption:nth-child(3)' },
+        { id: 'generator', loginCredentials: ['idcode'], path: '#loginTab_MOBILE_ID, .login-widget__tabs .ui-tabs__caption:nth-child(3) button', pathImport: '#loginTab_MOBILE_ID, .login-widget__tabs .ui-tabs__caption:nth-child(4)' },
+        { id: 'idcard', loginCredentials: ['idcode'], path: '#loginTab_PIN_CALCULATOR, .login-widget__tabs .ui-tabs__caption:nth-child(5) button', pathImport: '#loginTab_PIN_CALCULATOR, .login-widget__tabs .ui-tabs__caption:nth-child(5)' }
       ],
       loginCredentials: [
-        { id: 'idcode', path: '#userId, input[name="userId"]' },
-        { id: 'identity', path: '#authNumber, input[name="identityNumber"]' },
-        { id: 'phone', path: '#authPwd, input[name="phoneNumber"]' },
-        { id: 'generetedPass', npath: '#authPwd, input[name="pinCalcPassword"]' }
+        { id: 'idcode', path: '#userId, ui-tab:not(.-hidden) input[name="userId"]' },
+        { id: 'identity', path: '#authNumber, ui-tab:not(.-hidden) input[name="identityNumber"]' },
+        { id: 'phone', path: '#authPwd, ui-tab:not(.-hidden) input[name="phoneNumber"]' },
+        { id: 'generetedPass', npath: '#authPwd, ui-tab:not(.-hidden) input[name="pinCalcPassword"]' }
       ],
       loginPath: '#pwdLoginButton, #CERTIFICATE button[type="submit"]',
       loginOptionFlow: [

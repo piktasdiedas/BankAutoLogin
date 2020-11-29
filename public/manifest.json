@@ -20,8 +20,8 @@
     "128": "icons/icon_128.png"
   },
   "permissions": [
-    "https://e.seb.lt/*",
-    "https://swedbank.lt/*", "https://www.swedbank.lt/*",
+    "https://e.seb.lt/*", "https://ibanka.seb.lv/*", "https://e.seb.ee/*",
+    "https://swedbank.lt/*", "https://www.swedbank.lt/*", "https://www.swedbank.lv/*", "https://swedbank.lv/*", "https://www.swedbank.ee/*", "https://swedbank.ee/*",
     "https://ib.dnb.lt/*",
     "storage"
   ],
@@ -32,8 +32,8 @@
   "content_scripts": [
   {
     "matches": [
-      "https://e.seb.lt/*",
-      "https://swedbank.lt/*", "https://www.swedbank.lt/*",
+      "https://e.seb.lt/*", "https://ibanka.seb.lv/*", "https://e.seb.ee/*",
+      "https://swedbank.lt/*", "https://www.swedbank.lt/*", "https://www.swedbank.lv/*", "https://swedbank.lv/*", "https://www.swedbank.ee/*", "https://swedbank.ee/*",
       "https://ib.dnb.lt/*"
     ],
     "js": ["content.js"]

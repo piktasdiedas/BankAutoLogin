@@ -13,7 +13,7 @@ export const deep = (inObject) => {
 }
 
 export const getIdFromUrl = (url) => {
-  const bankId = url.includes('e.seb')
+  const bankId = url.includes('seb')
     ? 'seb' : url.includes('swedbank')
       ? 'swed' : url.includes('dnb')
         ? 'luminordnb'

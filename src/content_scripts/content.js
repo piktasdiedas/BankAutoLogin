@@ -82,7 +82,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       for (const field of request.config.loginCredentials) {
         if (!field.path) continue
 
-        response.credentials[field.key] = document.querySelector(field.path).value
+        const input = document.querySelector(field.path)
+        if (!input) continue
+
+        response.credentials[field.key] = input.value
       }
 
       sendResponse(response)
