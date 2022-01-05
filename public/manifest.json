@@ -1,11 +1,11 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "Bank credentials",
   "description": "Saves default logins and fills in fields on ebank page.",
-  "version": "1.1.4",
+  "version": "1.1.5",
 
-  "browser_action": {
+  "action": {
     "default_popup": "index.html",
     "default_title": "Bank credentials",
     "default_icon": {
@@ -20,14 +20,15 @@
     "128": "icons/icon_128.png"
   },
   "permissions": [
-    "https://e.seb.lt/*", "https://ibanka.seb.lv/*", "https://e.seb.ee/*",
-    "https://swedbank.lt/*", "https://www.swedbank.lt/*", "https://www.swedbank.lv/*", "https://swedbank.lv/*", "https://www.swedbank.ee/*", "https://swedbank.ee/*",
-    "https://ib.dnb.lt/*",
     "storage"
   ],
+  "host_permissions": [
+    "https://e.seb.lt/*", "https://ibanka.seb.lv/*", "https://e.seb.ee/*",
+    "https://swedbank.lt/*", "https://www.swedbank.lt/*", "https://www.swedbank.lv/*", "https://swedbank.lv/*", "https://www.swedbank.ee/*", "https://swedbank.ee/*",
+    "https://ib.dnb.lt/*"
+  ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
   "content_scripts": [
   {
